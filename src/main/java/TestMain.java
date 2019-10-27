@@ -1,6 +1,7 @@
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Multimap;
+import lombok.Lombok;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -23,7 +24,7 @@ prop.load(Objects.requireNonNull(resourceAsStream));
         System.out.println(prop.get("props.mvn.hello"));
 
                List<String> fruits = Lists.newArrayList("orange", "banana", "kiwi");
-        fruits.forEach(System.out::println);
+                fruits.forEach(System.out::println);
         List<String> reverseFruits = Lists.reverse(fruits);
         reverseFruits.forEach(System.out::println);
 
@@ -31,5 +32,8 @@ prop.load(Objects.requireNonNull(resourceAsStream));
         map.put("key", "firstValue");
         map.put("key", "secondValue");
         System.out.println(map);
+
+
+
     }
 }
